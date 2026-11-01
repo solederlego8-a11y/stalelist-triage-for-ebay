@@ -43,18 +43,23 @@
   };
 
   // ---------- parsing helpers ----------
+  // Header synonyms include Japanese because Chrome's built-in page
+  // translation rewrites Seller Hub / demo headers in the DOM (verified
+  // 2026-11-01 on a real Chrome: Views→閲覧数, Watchers→ウォッチャー,
+  // Quantity sold→販売数量, Days listed→出品日数 etc.). Without these,
+  // column mapping silently fails and every row degrades to Keep.
   const HEADER_SYNONYMS = [
-    ["title", ["title", "item title", "listing title"]],
-    ["itemId", ["item id", "item number", "listing id"]],
-    ["price", ["price", "current price", "buy it now price"]],
-    ["views", ["views", "page views", "visits"]],
-    ["watchers", ["watchers", "watch count"]],
-    ["qtySold", ["quantity sold", "sold", "items sold", "sales"]],
-    ["qtyAvailable", ["quantity", "available", "qty"]],
-    ["bids", ["bids", "bid count"]],
-    ["ageDays", ["days listed", "age (days)", "days active", "listing age"]],
-    ["startDate", ["start date", "listed date", "listing date", "date listed"]],
-    ["format", ["format", "listing type", "type"]],
+    ["title", ["title", "item title", "listing title", "アイテムタイトル", "商品タイトル", "タイトル"]],
+    ["itemId", ["item id", "item number", "listing id", "アイテムid", "商品id", "アイテム番号"]],
+    ["price", ["price", "current price", "buy it now price", "価格"]],
+    ["views", ["views", "page views", "visits", "閲覧数", "ビュー数", "表示回数"]],
+    ["watchers", ["watchers", "watch count", "ウォッチャー", "ウォッチ数"]],
+    ["qtySold", ["quantity sold", "sold", "items sold", "sales", "販売数量", "販売数", "売上数"]],
+    ["qtyAvailable", ["quantity", "available", "qty", "数量", "在庫数", "量"]],
+    ["bids", ["bids", "bid count", "入札数", "入札"]],
+    ["ageDays", ["days listed", "age (days)", "days active", "listing age", "出品日数", "掲載日数", "経過日数", "日数"]],
+    ["startDate", ["start date", "listed date", "listing date", "date listed", "開始日", "出品日", "掲載日"]],
+    ["format", ["format", "listing type", "type", "形式", "出品形式"]],
   ];
 
   function headerField(text) {
@@ -139,7 +144,7 @@
           views: Math.round(num(get("views"), 0)),
           watchers: Math.round(num(get("watchers"), 0)),
           qtySold: Math.round(num(get("qtySold"), 0)),
-          hasBids: num(get("bids"), 0) > 0 || /auction/.test(format) && num(get("bids"), 0) > 0,
+          hasBids: num(get("bids"), 0) > 0 || /auction|オークション/.test(format) && num(get("bids"), 0) > 0,
           price: money(get("price")),
           isMultiQuantity: qtyAvail > 1,
         },
