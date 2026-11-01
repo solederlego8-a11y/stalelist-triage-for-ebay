@@ -104,6 +104,17 @@ protection, multi-quantity warning, young→Keep, Gentle preset boundaries,
 score cap, the 80% detection guard, the free-plan 25-flag cap, free/Pro
 limits, CSV quoting, and summary counts. All passing as of this build.
 
+## Verification status
+
+- The full demo flow was exercised end-to-end in a DOM environment
+  (jsdom harness, 2026-11-01): panel build, extraction (table-headers
+  strategy, 12/12 detected, 100%), verdict badges (End 4 / Review 3 /
+  Keep 3 / Protected 2 as designed), End-candidate checkbox assist
+  (exactly the 4 End rows), Pro test-mode scores, CSV export
+  (header + 12 rows), cross-page save, and the Gentle preset.
+- Still unverified: the same flow rendered in a real Chrome window
+  (visual check), and everything about the live Seller Hub page below.
+
 ## Known unverified items (do not ship blind)
 
 - **Seller Hub's real DOM is unverified.** Development had no seller
