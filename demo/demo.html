@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo — Seller Hub (sample) | StaleList Triage for eBay</title>
+<link rel="stylesheet" href="../content/panel.css">
+<style>
+  body { font: 14px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 24px; color: #111827; max-width: 1180px; }
+  h1 { font-size: 20px; } .demo-note { background: #fffbeb; border: 1px solid #f59e0b; padding: 10px 12px; border-radius: 8px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 14px; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 8px; text-align: left; }
+  th { background: #f3f4f6; }
+  .count { color: #4b5563; margin-top: 10px; }
+</style>
+</head>
+<body>
+  <h1>Seller Hub — Active listings <span style="color:#6b7280">(DEMO PAGE)</span></h1>
+  <p class="demo-note"><b>This is a bundled sample page with 12 fictional listings</b>, provided so reviewers and users can try extraction, triage badges, selection assist and CSV export without an eBay account. It is not eBay and no real data is involved. Use the <b>StaleList Triage panel at the top-right</b>: press “Run triage on this page”. To try Pro-only features locally, open the extension popup and enter any key starting with <code>DEV-</code> (local test mode — see README).</p>
+  <p class="count">1 – 12 of 12 results</p>
+
+  <table id="listings">
+    <thead>
+      <tr>
+        <th><input type="checkbox" aria-label="select all"></th>
+        <th>Item title</th><th>Item ID</th><th>Format</th><th>Price</th>
+        <th>Quantity</th><th>Quantity sold</th><th>Views</th><th>Watchers</th><th>Bids</th><th>Days listed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><input type="checkbox"></td><td><a href="#">Vintage brass desk lamp, untested</a></td><td>356000000001</td><td>Fixed price</td><td>$24.99</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>150</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">1990s band tour T-shirt, size M</a></td><td>356000000002</td><td>Fixed price</td><td>$39.00</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>200</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Hand-knitted scarf, mustard</a></td><td>356000000003</td><td>Fixed price</td><td>$18.50</td><td>1</td><td>0</td><td>2</td><td>3</td><td>0</td><td>120</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Popular phone case, blue (restocked)</a></td><td>356000000004</td><td>Fixed price</td><td>$12.99</td><td>40</td><td>2</td><td>0</td><td>0</td><td>0</td><td>300</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Rare vinyl LP, first pressing (auction)</a></td><td>356000000005</td><td>Auction</td><td>$55.00</td><td>1</td><td>0</td><td>10</td><td>6</td><td>4</td><td>100</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Ceramic plant pot, cracked glaze</a></td><td>356000000006</td><td>Fixed price</td><td>$15.00</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>45</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">New listing: wireless earbuds case</a></td><td>356000000007</td><td>Fixed price</td><td>$9.99</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Collectible trading card, graded 9</a></td><td>356000000008</td><td>Fixed price</td><td>$120.00</td><td>1</td><td>0</td><td>40</td><td>5</td><td>0</td><td>95</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Bulk craft beads, 5 colours (multi-quantity)</a></td><td>356000000009</td><td>Fixed price</td><td>$7.50</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>130</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Antique pocket watch, for parts</a></td><td>356000000010</td><td>Fixed price</td><td>$85.00</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>400</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Trending water bottle, 1L</a></td><td>356000000011</td><td>Fixed price</td><td>$21.00</td><td>1</td><td>0</td><td>200</td><td>20</td><td>0</td><td>60</td></tr>
+      <tr><td><input type="checkbox"></td><td><a href="#">Old stock: phone charger cables</a></td><td>356000000012</td><td>Fixed price</td><td>$9.99</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td><td>180</td></tr>
+    </tbody>
+  </table>
+
+  <script src="../config/license-config.js"></script>
+  <script src="../lib/rules.js"></script>
+  <script src="../lib/license.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

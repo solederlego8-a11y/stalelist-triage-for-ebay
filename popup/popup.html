@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StaleList Triage for eBay</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>StaleList Triage <span>for eBay</span></h1>
+  <p class="tag">Read-only triage for stale listings. It never ends, relists or edits your listings.</p>
+
+  <section>
+    <h2>How to use</h2>
+    <ol>
+      <li>Open Seller Hub → Active listings.</li>
+      <li>Use the on-page panel (top right) to run triage.</li>
+    </ol>
+    <p class="note">No Seller Hub access? Open the bundled <b>demo/demo.html</b> page instead — the same panel works there with 12 sample listings.</p>
+  </section>
+
+  <section>
+    <h2>License</h2>
+    <p id="lic-status" class="note">Checking…</p>
+    <label>License key <input id="lic-key" type="text" placeholder="DEV-… for local test mode" autocomplete="off"></label>
+    <div class="row">
+      <button id="lic-save">Save &amp; verify</button>
+      <button id="lic-clear" class="ghost">Clear</button>
+    </div>
+    <p id="lic-msg" class="note"></p>
+    <p class="note fine">Free features will never be moved behind the paywall. Pro only adds: Gentle preset &amp; custom rules, cross-page selection, CSV export, rule saving and staleness scores.</p>
+  </section>
+
+  <footer>StaleList Triage is not affiliated with or endorsed by eBay Inc.</footer>
+
+  <script src="../config/license-config.js"></script>
+  <script src="../lib/license.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

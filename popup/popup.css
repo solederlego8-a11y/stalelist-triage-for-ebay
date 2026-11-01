@@ -1,0 +1,14 @@
+body { width: 320px; margin: 0; padding: 14px; font: 13px/1.5 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #111827; }
+h1 { font-size: 15px; margin: 0 0 2px; }
+h1 span { color: #6b7280; font-weight: 400; }
+h2 { font-size: 13px; margin: 12px 0 4px; }
+.tag { color: #4b5563; margin: 0 0 6px; }
+.note { color: #4b5563; font-size: 12px; }
+.fine { color: #9ca3af; font-size: 11px; }
+label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; margin-top: 6px; }
+input { padding: 6px 8px; border: 1px solid #d1d5db; border-radius: 7px; font: inherit; }
+.row { display: flex; gap: 8px; margin-top: 8px; }
+button { padding: 6px 12px; border-radius: 8px; border: 1px solid #1d4ed8; background: #1d4ed8; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+button.ghost { background: #fff; color: #374151; border-color: #9ca3af; }
+footer { margin-top: 12px; font-size: 11px; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 8px; }
+ol { margin: 4px 0; padding-left: 18px; }
